@@ -38,7 +38,7 @@ public class ExamPortalApplication implements CommandLineRunner{
 //		
 //		user.setFirstName("pradeep");
 //		user.setLastName("nishad");
-//          user.setPassword(bCryptPasswordEncoder.encode("12345"));
+//         user.setPassword(bCryptPasswordEncoder.encode("12345"));
 //		user.setPhone("9834128244");
 //	
 //		user.setUsername("Pradeep@354");
@@ -66,8 +66,13 @@ public class ExamPortalApplication implements CommandLineRunner{
 //		
 //	}catch(UserFoundException exception) {
 //		
-//		exception.printStackTrace();
+//		exception.printStackTrace();	
 //	}
+		
+		
+		BCryptPasswordEncoder b=new BCryptPasswordEncoder();
+		String encode = b.encode("12345");
+		System.out.println(encode);
 	}
 	
 		
